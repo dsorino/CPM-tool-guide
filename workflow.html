@@ -1,0 +1,1515 @@
+
+<!doctype html>
+<html lang="en" class="no-js" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User guide for the Country Projection Model (CPM) Tool">
+      
+      
+        <meta name="author" content="Dennis E. Sorino">
+      
+      
+      
+        <link rel="prev" href="concepts.html">
+      
+      
+        <link rel="next" href="reports.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Forecasting Workflow - CPM Tool User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/print-site.css">
+    
+      <link rel="stylesheet" href="css/print-site-material.css">
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:ADBCountry msdt:dt="string"></mso:ADBCountry>
+<mso:ia017ac09b1942648b563fe0b2b14d52 msdt:dt="string">ERMR|1b0f6326-b8c9-47db-9084-1685569433b2</mso:ia017ac09b1942648b563fe0b2b14d52>
+<mso:d01a0ce1b141461dbfb235a3ab729a2c msdt:dt="string"></mso:d01a0ce1b141461dbfb235a3ab729a2c>
+<mso:ADBDocumentSecurity msdt:dt="string"></mso:ADBDocumentSecurity>
+<mso:ADBDepartmentOwner msdt:dt="string">4;#ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467</mso:ADBDepartmentOwner>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:ADBDocumentLanguage msdt:dt="string">1;#English|16ac8743-31bb-43f8-9a73-533a041667d6</mso:ADBDocumentLanguage>
+<mso:p030e467f78f45b4ae8f7e2c17ea4d82 msdt:dt="string"></mso:p030e467f78f45b4ae8f7e2c17ea4d82>
+<mso:d61536b25a8a4fedb48bb564279be82a msdt:dt="string">ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467</mso:d61536b25a8a4fedb48bb564279be82a>
+<mso:ADBSector msdt:dt="string"></mso:ADBSector>
+<mso:ADBDivision msdt:dt="string">7;#ERMR|1b0f6326-b8c9-47db-9084-1685569433b2</mso:ADBDivision>
+<mso:a37ff23a602146d4934a49238d370ca5 msdt:dt="string"></mso:a37ff23a602146d4934a49238d370ca5>
+<mso:k985dbdc596c44d7acaf8184f33920f0 msdt:dt="string"></mso:k985dbdc596c44d7acaf8184f33920f0>
+<mso:j78542b1fffc4a1c84659474212e3133 msdt:dt="string">ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467</mso:j78542b1fffc4a1c84659474212e3133>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:TaxCatchAll msdt:dt="string">4;#ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467;#3;#ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467;#1;#English|16ac8743-31bb-43f8-9a73-533a041667d6;#7;#ERMR|1b0f6326-b8c9-47db-9084-1685569433b2</mso:TaxCatchAll>
+<mso:h00e4aaaf4624e24a7df7f06faa038c6 msdt:dt="string">English|16ac8743-31bb-43f8-9a73-533a041667d6</mso:h00e4aaaf4624e24a7df7f06faa038c6>
+<mso:ADBDocumentType msdt:dt="string"></mso:ADBDocumentType>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#forecasting-workflow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="CPM Tool User Guide" class="md-header__button md-logo" aria-label="CPM Tool User Guide" data-md-component="logo">
+      
+  <img src="assets/images/adb-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CPM Tool User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Forecasting Workflow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="getting-started.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="concepts.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Concepts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="workflow.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Forecasting Workflow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="reports.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Reports
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="exercise.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hands-on Exercise
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="reference.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Reference
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="CPM Tool User Guide" class="md-nav__button md-logo" aria-label="CPM Tool User Guide" data-md-component="logo">
+      
+  <img src="assets/images/adb-logo.png" alt="logo">
+
+    </a>
+    CPM Tool User Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="concepts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forecasting Workflow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="workflow.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forecasting Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#economy-forecast-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Economy Forecast Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-update-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A: Update Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A: Update Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-manually-update-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Manually update data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-update_allpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Run update_all.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-update_allpy-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How update_all.py works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-configuring-attributesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B: Configuring attributes.json
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-forecast-economies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C: Forecast Economies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C: Forecast Economies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-model-nine-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Model Nine Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulate-forecast-and-judgment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulate Forecast and Judgment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulate Forecast and Judgment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annual-tunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annual Tunes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quarterly-tunes-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quarterly tunes adjustments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reports.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="exercise.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-on Exercise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#economy-forecast-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Economy Forecast Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-update-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A: Update Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A: Update Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-manually-update-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Manually update data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-run-update_allpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Run update_all.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-update_allpy-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How update_all.py works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-configuring-attributesjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B: Configuring attributes.json
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-forecast-economies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C: Forecast Economies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C: Forecast Economies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-model-nine-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Model Nine Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulate-forecast-and-judgment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simulate Forecast and Judgment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulate Forecast and Judgment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annual-tunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Annual Tunes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quarterly-tunes-adjustments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quarterly tunes adjustments
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="forecasting-workflow">Forecasting Workflow<a class="headerlink" href="#forecasting-workflow" title="Permanent link">&para;</a></h1>
+<p>This section walks through a full forecast round.</p>
+<div class="admonition warning">
+<p class="admonition-title">Always run from the project root and activate Python environment</p>
+<p>Execute every command from the main project directory (for example <code>C:\CPM_Tool</code>) with <code>cpm_venv</code> activated, so that the correct modules are used.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cpm_venv\Scripts\activate
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>cpm_venv/bin/activate
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="economy-forecast-order">Economy Forecast Order<a class="headerlink" href="#economy-forecast-order" title="Permanent link">&para;</a></h2>
+<p>For each forecast round, the <em>external economies</em> are forecast before the <em>focus economies</em>, and the <strong>United States runs first</strong>.</p>
+<figure>
+<p><img alt="Forecasting external environment" src="assets/images/external_forecast_flow.png" /></p>
+</figure>
+<div class="admonition question">
+<p class="admonition-title">Why the US first?</p>
+<p>US CPI projections are needed to compute real exchange rate gaps against the US dollar for all other external economies.</p>
+</div>
+<h2 id="a-update-data">A: Update Data<a class="headerlink" href="#a-update-data" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-manually-update-data">Step 1: Manually update data<a class="headerlink" href="#step-1-manually-update-data" title="Permanent link">&para;</a></h3>
+<p><em>If you have data that is entered manually, update the CSV file before running update_all.</em></p>
+<p>Ex. Bhutan's' data are updated manually <strong>before</strong> running <code>update_all</code>.</p>
+<p><strong>1. Get the source data.</strong> Download the latest <em>Monthly Statistical Bulletin</em> from the Royal Monetary Authority of Bhutan publications page: <code>https://www.rma.org.bt/publication/31/</code></p>
+<figure>
+<p><img alt="RMA Monthly Statistical Bulletin page" src="assets/images/rma-msb-page.png" width="480" /></p>
+<figcaption>Source: Monthly Statistical Bulletin list on the RMA website.</figcaption>
+</figure>
+<p><strong>2. Update the CSV file.</strong> Enter the new observations in <code>datastore_pumps/manual/bhutan.csv</code>. The file holds quarterly series (for example NGDP and RGDP) in one block and monthly series (for example CPI) in another.</p>
+<figure>
+<p><img alt="bhutan.csv layout" src="assets/images/bhutan-csv.png" width="420" /></p>
+<figcaption>Layout of datastore_pumps/manual/bhutan.csv — a quarterly block (NGDP, RGDP) and a monthly block (CPI).</figcaption>
+</figure>
+<p><strong>3. Refresh the datastore.</strong> Save and close the file, then run <code>python -m datastore_pumps.update_all</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Keep the existing layout</p>
+<p>Add new periods below the last observation in each block and keep the existing headers and date formats (<code>YYYY-Qn</code> for quarterly, <code>YYYY-MM</code> for monthly).</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Adding annual data</p>
+<p>Add/insert <code>__yearly__</code> column to store annual data. When adding a new CSV file, ensure that its filename is also added to this section 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="c1">#%% Manual resources</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nv">manual_resources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="s2">"bhutan.csv"</span>,<span class="w"> </span><span class="s2">"china.csv"</span>,
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="o">)</span>
+</code></pre></div></p>
+</div>
+<hr />
+<h3 id="step-2-run-update_allpy">Step 2: Run <code>update_all.py</code><a class="headerlink" href="#step-2-run-update_allpy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>-m<span class="w"> </span>datastore_pumps.update_all<span class="w">      </span><span class="c1"># → datastore/data.csv</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Connection errors when running <code>update_all</code></p>
+<p><code>update_all</code> downloads data from online sources such as FRED and IMF. If the connection is slow or unstable, or a data provider is temporarily unavailable, the run may stop with a connection or timeout error.</p>
+<p>If this happens, wait a few minutes, then run the command again.</p>
+<p>If the error persists, check your internet connection or check the source website if it is down and try again later.</p>
+</div>
+<p><strong>Sample Data Source Error</strong></p>
+<figure>
+<p><img alt="Error connecting FRED" src="assets/images/dataupdate_error.png" /></p>
+</figure>
+<figure>
+<p><img alt="FRED maintenance" src="assets/images/FRED.png" /></p>
+</figure>
+<hr />
+<h3 id="how-update_allpy-works">How <code>update_all.py</code> works<a class="headerlink" href="#how-update_allpy-works" title="Permanent link">&para;</a></h3>
+<figure>
+<p><img alt="Data pumps works" src="assets/images/datapumps.png" /></p>
+</figure>
+<ol>
+<li><code>data_source_info.csv</code> defines the metadata-to-source map.</li>
+<li>Filtering by provider or resource creates <code>relevant_map</code>.</li>
+<li>Entries become <code>request_strings</code>; <code>output_mapping</code> links them to storage keys.</li>
+<li><code>macrotap</code> pulls the data; <code>manual_resources</code> are read from <code>.csv</code> files.</li>
+<li><code>api.submit</code> writes the datastore and renames variables.</li>
+</ol>
+<hr />
+<h2 id="b-configuring-attributesjson">B: Configuring <code>attributes.json</code><a class="headerlink" href="#b-configuring-attributesjson" title="Permanent link">&para;</a></h2>
+<p>Each country model has an <code>attributes.json</code> file that sets the identifiers and sample periods for the forecast round. Review and update it <strong>before</strong> running the model.</p>
+<p><strong>What forecast IDs are for</strong></p>
+<p>Forecast IDs label each forecast round. They are part of the key under which results are saved in the datastore, so they let you:</p>
+<ul>
+<li><strong>Keep track of different forecast rounds</strong>, such as a January forecast, February forecast, etc., without mixing up results.</li>
+<li><strong>Properly link models to each other.</strong> A focus-country model uses the forecast IDs to find the right external economies inputs.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Agree on a naming standard before you start</p>
+<p>Because forecast IDs are used to store and retrieve results across models, it is worth agreeing on a naming convention with your team <strong>before</strong> the first forecast round. A consistent standard IDs makes it easy to see which round a result belongs to and avoids linking a model to the wrong inputs.</p>
+<table>
+<thead>
+<tr>
+<th>Economy</th>
+<th>ID Format</th>
+<th>Example ID</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>External economies</td>
+<td>EX_(MMMYYYY)_F(forecast round)</td>
+<td><code>EX_JAN2026_F1</code></td>
+<td>All external economies should use the same forecast ID for each forecast round. That is, <code>us</code> ID should be the same in <code>cn</code>, <code>ea</code>, and <code>jp</code>.</td>
+</tr>
+<tr>
+<td>Focus economies</td>
+<td>(2-char country code)_(MMMYYYY)__F(forecast round)</td>
+<td><code>PH_JAN2026_F1</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Whatever convention you choose, use it consistently across all country models, and keep a record of what each ID refers to.</p>
+</div>
+<p><strong>Attributes Settings</strong></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it controls</th>
+<th>Applicable to</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>us_forecast_id</code></td>
+<td>US unique identifier for this forecast round</td>
+<td><code>cn</code>, <code>ea</code>, <code>jp</code></td>
+<td><code>"EX_JAN2026_F1"</code></td>
+</tr>
+<tr>
+<td><code>forecast_id</code></td>
+<td>Unique identifier for this forecast round</td>
+<td>All</td>
+<td><code>"EX_JAN2026_F1"</code> for cn, ea, jp/ <code>PH_JAN2026_F1</code> for ph</td>
+</tr>
+<tr>
+<td><code>external_forecast_id</code></td>
+<td>External forecast set used by domestic models</td>
+<td><code>ph</code>, <code>in</code>, <code>bt</code></td>
+<td><code>"EX_JAN_F1"</code></td>
+</tr>
+<tr>
+<td><code>forecast_end_period</code></td>
+<td>End date for projections</td>
+<td>All</td>
+<td><code>"2027-Q4"</code></td>
+</tr>
+<tr>
+<td><code>history_end_period</code></td>
+<td>Last period of historical data</td>
+<td><code>us</code>, <code>cn</code>, <code>ea</code>, <code>jp</code></td>
+<td><code>"2025-Q4"</code></td>
+</tr>
+<tr>
+<td><code>history_start_period</code></td>
+<td>Start of historical sample</td>
+<td>All</td>
+<td><code>"2010-Q1"</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Illustrative <code>attributes.json</code></p>
+<p>United States: <code>us</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">"forecast_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EX_JAN2026_F1"</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">"forecast_end_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-Q4"</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">"history_end_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-Q2"</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nt">"history_start_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-Q1"</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
+</code></pre></div></p>
+<p>For <code>cn</code>, <code>ea</code>, <code>jp</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">"us_forecast_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EX_JAN2026_F1"</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">"forecast_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EX_JAN2026_F1"</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">"forecast_end_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-Q4"</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">"history_end_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-Q2"</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nt">"history_start_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-Q1"</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
+</code></pre></div></p>
+<p>For focus economies: <code>ph</code>, <code>in</code>, <code>bt</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">"external_forecast_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EX_JAN2026_F1"</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">"forecast_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PH_JAN2026_F1"</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">"forecast_end_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2027-Q4"</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">"history_start_period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2010-Q1"</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
+</code></pre></div></p>
+</div>
+<hr />
+<h2 id="c-forecast-economies">C: Forecast Economies<a class="headerlink" href="#c-forecast-economies" title="Permanent link">&para;</a></h2>
+<h3 id="the-model-nine-steps">The Model Nine Steps<a class="headerlink" href="#the-model-nine-steps" title="Permanent link">&para;</a></h3>
+<p>Every country model follows the same nine steps, grouped into three phases: <strong>Phase A</strong> <em>(Build and Load)</em>, <strong>Phase B</strong> <em>(Calibrate and Filter)</em>, and <strong>Phase C</strong> <em>(Forecast and Submit)</em>. Each step is a module run from the project root:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python -m {country}.{step}
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python3<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.<span class="o">{</span>step<span class="o">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>For example, <code>python -m us.create_model</code> runs Step 1 for United States.</p>
+<figure>
+<p><img alt="The model nine steps slide" src="assets/images/hands-on-flow.png" /></p>
+<figcaption>The model nine steps, with review checkpoints and the judgment step.</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Use the report steps</p>
+<p>Steps 4, 6 and 8 validate calibration, data quality and forecast reasonableness. Pause at each one and review the outputs before moving on.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Quick run (all steps)</label><label for="__tabbed_3_2">Step by step</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Use the <code>run_all</code> module in each country folder to skip <code>report_steady_calibration</code> and <code>report_filter</code>. </p>
+<p><strong>Note:</strong> <em>Any applied tunes will refresh and revert to their original state once <code>run_all</code> is executed.</em></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python<span class="w"> </span>-m<span class="w"> </span>us.run_all
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>python<span class="w"> </span>-m<span class="w"> </span>cn.run_all
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>python<span class="w"> </span>-m<span class="w"> </span>jp.run_all
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>python<span class="w"> </span>-m<span class="w"> </span>ea.run_all
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="k">in</span>.run_all
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>python<span class="w"> </span>-m<span class="w"> </span>bt.run_all
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Use the step-by-step run when you need to review calibration and filter results.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.create_model
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.request_data
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.prepare_history
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.report_steady_calibration
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.filter_history
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.review_filter
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.simulate_forecast
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.review_forecast
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>python<span class="w"> </span>-m<span class="w"> </span><span class="o">{</span>country<span class="o">}</span>.submit_forecast
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="steps-description">Steps Description<a class="headerlink" href="#steps-description" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Step</th>
+<th>Module</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Create Model</td>
+<td><code>create_model</code></td>
+<td>Creates and calibrates the economic model with country-specific parameters. Saves the model to a pickle file for use in later steps.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Request Data from Datastore</td>
+<td><code>request_data</code></td>
+<td>Requests historical data from the central datastore based on the input mapping configuration, and downloads the raw data needed for estimation and forecasting.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Prepare History</td>
+<td><code>prepare_history</code></td>
+<td>Processes raw historical data, applies transformations, calculates derived variables and prepares the dataset for running the Kalman filter on the history.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Review Steady-State Calibration</td>
+<td><code>report_steady_calibration</code></td>
+<td>Generates charts and analysis of the model's steady-state calibration against historical data. <strong>Review</strong> that long-term equilibrium assumptions are appropriate before filtering and forecasting.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Filter History</td>
+<td><code>filter_history</code></td>
+<td>Applies statistical filters to separate trends from cyclical components, creating the filtered series used as forecast inputs.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Report Filter</td>
+<td><code>report_filter</code></td>
+<td>Generates charts and analysis of the filtered data to validate the trend–cycle decomposition and review model inputs.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Simulate Forecast</td>
+<td><code>simulate_forecast</code></td>
+<td>Runs the model to generate forecasts. This is the step that typically requires <strong>manual, judgmental adjustments</strong> — see <a href="simulate-forecast.md">Simulate Forecast and Judgment</a>.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Report Forecast</td>
+<td><code>report_forecast</code></td>
+<td>Creates charts, tables and analytical outputs presenting the forecast in a standard format for review and distribution.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Submit Forecast</td>
+<td><code>submit_forecast</code></td>
+<td>Uploads the forecast results to the central datastore, making them available to other models and for final reporting.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="simulate-forecast-and-judgment">Simulate Forecast and Judgment<a class="headerlink" href="#simulate-forecast-and-judgment" title="Permanent link">&para;</a></h3>
+<p><code>simulate_forecast</code> (Step 7) is where judgment enters the forecast. There are two ways to apply it: <strong>annual tunes</strong> and <strong>manual adjustments</strong>.</p>
+<h4 id="annual-tunes">Annual Tunes<a class="headerlink" href="#annual-tunes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Tunes set a variable directly; the simulation solves for the shocks needed to hit the target.</li>
+<li>Tunes constrain the <strong>annual</strong> result — the model determines the quarterly path.</li>
+<li>Enter annual values in <strong><code>tune_files/annual_tunes.csv</code></strong> where <code>forecast_span = 1</code>.</li>
+<li><code>roc</code> is the <strong>gross</strong> rate of change, and all rates, including interest rates, are entered as <strong>decimals</strong>.</li>
+<li><strong>Save and close the file</strong> before running the forecast.</li>
+</ul>
+<p>Annual Tunes File</p>
+<figure>
+<p><img alt="Annual tunes" src="assets/images/tunes_file.png" /></p>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Entering rates</p>
+<table>
+<thead>
+<tr>
+<th>You want</th>
+<th>Enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5% growth (as <code>roc</code>)</td>
+<td><code>1.05</code></td>
+</tr>
+<tr>
+<td>3% growth (as <code>roc</code>)</td>
+<td><code>1.03</code></td>
+</tr>
+<tr>
+<td>A 6.5% interest rate</td>
+<td><code>0.065</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>How annual tunes work</strong></p>
+<figure>
+<p><img alt="How tunes work" src="assets/images/tunes.png" /></p>
+</figure>
+<h4 id="quarterly-tunes-adjustments">Quarterly tunes adjustments<a class="headerlink" href="#quarterly-tunes-adjustments" title="Permanent link">&para;</a></h4>
+<p>The simulation script contains a free-form area for judgment on variables and shocks that are <strong>already declared in the model</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">#==================================================================</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1"># Add judgmental adjustments here</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1">## Syntax</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1">#   quick_tunes = {"&lt;variable&gt;": {ir.qq(&lt;year&gt;, &lt;q&gt;): &lt;value&gt;, ...}, ...}</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># Set quarters and values with: ir.qq(2025, 4): 1.008</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1">#   - one entry per quarter, several quarters go in the same inner dictionary</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1">#   - quarter must be in the forecast period and have no actual data</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c1">#   - don't tune a quarter that is already pinned</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1">#   - don't tune all 4 quarters of a year that also has an annual tune</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="c1"># Variables available for quarterly tuning:</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="c1">#   roc_gdp  gross Q/Q, 1.005 = 0.5% q/q   (lever: tune_gdp_gap, or shk_gdp_gap on old models)</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="c1">#   roc_cpi  gross Q/Q, 1.008 = 0.8% q/q   (lever: tune_roc_cpi)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="c1">#   i        decimal, 0.0575 = 5.75%       (lever: tune_i)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="c1">#   e        level, same units as the data (lever: tune_e; not available for BT, e is pegged to IN)</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="n">quick_tunes</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>    <span class="c1">#"roc_gdp": {ir.qq(2026,2): 1.05, ir.qq(2026,3): 1.006,},</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>    <span class="c1">#"roc_cpi": {ir.qq(2026, 3): 1.02, },</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>    <span class="c1">#"i": {ir.qq(2026, 3): 0.0575, },        </span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="p">}</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="c1"># Check which GDP lever is available</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="n">gdp_lever</span> <span class="o">=</span> <span class="s2">"tune_gdp_gap"</span> <span class="k">if</span> <span class="s2">"tune_gdp_gap"</span> <span class="ow">in</span> <span class="n">shock_names</span> <span class="k">else</span> <span class="s2">"shk_gdp_gap"</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="c1"># Define levers</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="n">quick_levers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"roc_gdp"</span><span class="p">:</span> <span class="n">gdp_lever</span><span class="p">,</span> <span class="s2">"roc_cpi"</span><span class="p">:</span> <span class="s2">"tune_roc_cpi"</span><span class="p">,</span> <span class="s2">"i"</span><span class="p">:</span> <span class="s2">"tune_i"</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">:</span> <span class="s2">"tune_e"</span><span class="p">,</span> <span class="p">}</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="c1"># Sanity check ranges</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="n">quick_ranges</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"roc_gdp"</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">),</span> <span class="s2">"roc_cpi"</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">),</span> <span class="s2">"i"</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">),</span> <span class="p">}</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="c1"># Perform swap</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">points</span> <span class="ow">in</span> <span class="n">quick_tunes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>    <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">points</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>        <span class="c1"># Quarter must be in the forecast span</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>        <span class="k">if</span> <span class="n">t</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">forecast_span</span><span class="p">:</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Quick tune: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2"> is outside the forecast span"</span><span class="p">)</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>        <span class="c1"># Quarter must not already be pinned by actual available</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>        <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">history_db</span> <span class="ow">and</span> <span class="n">history_db</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">end</span> <span class="o">&gt;=</span> <span class="n">t</span><span class="p">:</span>
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Quick tune: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2"> already has actual data"</span><span class="p">)</span>
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>        <span class="c1"># Value must look like the right unit (Optional check if needed)</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>        <span class="n">lo</span><span class="p">,</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">quick_ranges</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">inf</span><span class="p">))</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">lo</span> <span class="o">&lt;=</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="n">hi</span><span class="p">:</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Quick tune: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> is outside </span><span class="si">{</span><span class="n">lo</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">hi</span><span class="si">}</span><span class="s2">; check units"</span><span class="p">)</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>        <span class="n">plan</span><span class="o">.</span><span class="n">swap_anticipated</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">quick_levers</span><span class="p">[</span><span class="n">n</span><span class="p">]),</span> <span class="p">)</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>        <span class="n">input_db</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a><span class="c1">#==================================================================</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">No new variables</p>
+<p>New variables cannot be introduced here unless they are first added to the model equations.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Revisit existing judgment</p>
+<p>Review adjustments carried over from earlier rounds against current conditions before re-running.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="concepts.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Concepts">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Concepts
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="reports.html" class="md-footer__link md-footer__link--next" aria-label="Next: Reports">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Reports
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>
