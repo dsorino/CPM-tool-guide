@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -65,30 +65,7 @@
 
     
     
-  
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:ADBCountry msdt:dt="string"></mso:ADBCountry>
-<mso:ia017ac09b1942648b563fe0b2b14d52 msdt:dt="string">ERMR|1b0f6326-b8c9-47db-9084-1685569433b2</mso:ia017ac09b1942648b563fe0b2b14d52>
-<mso:d01a0ce1b141461dbfb235a3ab729a2c msdt:dt="string"></mso:d01a0ce1b141461dbfb235a3ab729a2c>
-<mso:ADBDocumentSecurity msdt:dt="string"></mso:ADBDocumentSecurity>
-<mso:ADBDepartmentOwner msdt:dt="string">4;#ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467</mso:ADBDepartmentOwner>
-<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
-<mso:ADBDocumentLanguage msdt:dt="string">1;#English|16ac8743-31bb-43f8-9a73-533a041667d6</mso:ADBDocumentLanguage>
-<mso:p030e467f78f45b4ae8f7e2c17ea4d82 msdt:dt="string"></mso:p030e467f78f45b4ae8f7e2c17ea4d82>
-<mso:d61536b25a8a4fedb48bb564279be82a msdt:dt="string">ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467</mso:d61536b25a8a4fedb48bb564279be82a>
-<mso:ADBSector msdt:dt="string"></mso:ADBSector>
-<mso:ADBDivision msdt:dt="string">7;#ERMR|1b0f6326-b8c9-47db-9084-1685569433b2</mso:ADBDivision>
-<mso:a37ff23a602146d4934a49238d370ca5 msdt:dt="string"></mso:a37ff23a602146d4934a49238d370ca5>
-<mso:k985dbdc596c44d7acaf8184f33920f0 msdt:dt="string"></mso:k985dbdc596c44d7acaf8184f33920f0>
-<mso:j78542b1fffc4a1c84659474212e3133 msdt:dt="string">ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467</mso:j78542b1fffc4a1c84659474212e3133>
-<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
-<mso:TaxCatchAll msdt:dt="string">4;#ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467;#3;#ERCD|ab3ec0c9-2ce1-477e-8dd0-15d1f7f6b467;#1;#English|16ac8743-31bb-43f8-9a73-533a041667d6;#7;#ERMR|1b0f6326-b8c9-47db-9084-1685569433b2</mso:TaxCatchAll>
-<mso:h00e4aaaf4624e24a7df7f06faa038c6 msdt:dt="string">English|16ac8743-31bb-43f8-9a73-533a041667d6</mso:h00e4aaaf4624e24a7df7f06faa038c6>
-<mso:ADBDocumentType msdt:dt="string"></mso:ADBDocumentType>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
-</head>
+  </head>
   
   
     
@@ -843,43 +820,556 @@
 <figure>
 <p><img alt="External economies quarterly report" src="assets/images/ex_quarterly_report.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>External GDP</td>
+<td><code>gdpw</code> | <code>gdpw_tnd</code></td>
+<td>Real GDP level and trend</td>
+</tr>
+<tr>
+<td>External GDP gap</td>
+<td><code>100*(gdpw_gap - 1)</code></td>
+<td>% of trend</td>
+</tr>
+<tr>
+<td>External GDP, Q/Q PA</td>
+<td><code>apct_gdpw</code> | <code>apct_gdpw_tnd</code></td>
+<td>Annualized Q/Q growth and trend</td>
+</tr>
+<tr>
+<td>External CPI, Q/Q PA</td>
+<td><code>apct_cpiw</code></td>
+<td>Annualized Q/Q CPI growth</td>
+</tr>
+<tr>
+<td>External nominal interest rate</td>
+<td><code>100*iw</code></td>
+<td>Nominal interest rate</td>
+</tr>
+<tr>
+<td>External real interest rate</td>
+<td><code>100*riw</code></td>
+<td>Real interest rate</td>
+</tr>
+<tr>
+<td>External nominal USD exchange rate</td>
+<td><code>ew</code></td>
+<td>Local currency per USD</td>
+</tr>
+<tr>
+<td>External real USD exchange rate</td>
+<td><code>rew</code> | <code>rew_tnd</code></td>
+<td>Real exchange rate and trend</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="annual-report">Annual Report<a class="headerlink" href="#annual-report" title="Permanent link">&para;</a></h3>
 <figure>
 <p><img alt="External economies annual report" src="assets/images/ex_quarterly_report.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>External GDP</td>
+<td><code>yy_gdpw</code> | <code>yy_gdpw_tnd</code></td>
+<td>Annual real GDP level and trend (sums)</td>
+</tr>
+<tr>
+<td>External GDP gap</td>
+<td><code>100*(yy_gdpw_gap - 1)</code></td>
+<td>% of annual trend</td>
+</tr>
+<tr>
+<td>External GDP, Y/Y</td>
+<td><code>yy_pct_gdpw</code> | <code>yy_pct_gdpw_tnd</code></td>
+<td>% calendar-year growth vs trend growth</td>
+</tr>
+<tr>
+<td>External CPI, Y/Y</td>
+<td><code>yy_pct_cpiw</code></td>
+<td>% change of annual average CPI</td>
+</tr>
+<tr>
+<td>External nominal interest rate</td>
+<td><code>100*yy_iw</code></td>
+<td>Annual average nominal interest rate</td>
+</tr>
+<tr>
+<td>External real interest rate</td>
+<td><code>100*yy_riw</code></td>
+<td>Annual average real interest rate</td>
+</tr>
+<tr>
+<td>External nominal USD exchange rate</td>
+<td><code>yy_ew</code></td>
+<td>Annual average local currency per USD</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="focus-economies">Focus Economies<a class="headerlink" href="#focus-economies" title="Permanent link">&para;</a></h2>
 <h3 id="quarterly-reports">Quarterly Reports<a class="headerlink" href="#quarterly-reports" title="Permanent link">&para;</a></h3>
+<p><strong>Real GDP ratios of GDP components</strong></p>
+<p>Shows each real expenditure component as a share of real GDP.</p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_gdp_ratios_q.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Private consumption to GDP</td>
+<td><code>cpr_to_gdp</code></td>
+</tr>
+<tr>
+<td>Government consumption to GDP</td>
+<td><code>cgg_to_gdp</code></td>
+</tr>
+<tr>
+<td>Fixed capital formation to GDP</td>
+<td><code>fcf_to_gdp</code></td>
+</tr>
+<tr>
+<td>Exports of goods and services to GDP</td>
+<td><code>xgs_to_gdp</code></td>
+</tr>
+<tr>
+<td>Imports of goods and services to GDP</td>
+<td><code>mgs_to_gdp</code></td>
+</tr>
+<tr>
+<td>Change in business inventories to GDP</td>
+<td><code>cbi_to_gdp</code></td>
+</tr>
+<tr>
+<td>Statistical discrepancies to GDP</td>
+<td><code>sdx_to_gdp</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Gaps in real GDP components</strong></p>
+<p>Shows % deviation from trend.</p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_gaps_q.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GDP</td>
+<td><code>100*(gdp_gap-1)</code></td>
+</tr>
+<tr>
+<td>Private consumption</td>
+<td><code>100*(cpr_gap-1)</code></td>
+</tr>
+<tr>
+<td>Government consumption</td>
+<td><code>100*(cgg_gap-1)</code></td>
+</tr>
+<tr>
+<td>Fixed capital formation</td>
+<td><code>100*(fcf_gap-1)</code></td>
+</tr>
+<tr>
+<td>Exports of goods and services</td>
+<td><code>100*(xgs_gap-1)</code></td>
+</tr>
+<tr>
+<td>Imports of goods and services</td>
+<td><code>100*(mgs_gap-1)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Real GDP components annualised Q/Q growth</strong></p>
+<p>% annualised Q/Q growth, computed as <code>100*((x/x[-1])^4 - 1)</code>.</p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_gdp_components_qq_q.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GDP</td>
+<td><code>apct_gdp</code></td>
+</tr>
+<tr>
+<td>Private consumption</td>
+<td><code>apct_cpr</code></td>
+</tr>
+<tr>
+<td>Government consumption</td>
+<td><code>apct_cgg</code></td>
+</tr>
+<tr>
+<td>Fixed capital formation</td>
+<td><code>apct_fcf</code></td>
+</tr>
+<tr>
+<td>Exports of goods and services</td>
+<td><code>apct_xgs</code></td>
+</tr>
+<tr>
+<td>Imports of goods and services</td>
+<td><code>apct_mgs</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Annual sum of real GDP components Y/Y growth</strong></p>
+<p>% growth of a 4-quarter rolling sum.</p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_gdp_components_annual_q.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GDP</td>
+<td><code>100*(ann_gdp/ann_gdp[-4] - 1)</code></td>
+</tr>
+<tr>
+<td>Private consumption</td>
+<td><code>100*(ann_cpr/ann_cpr[-4] - 1)</code></td>
+</tr>
+<tr>
+<td>Government consumption</td>
+<td><code>100*(ann_cgg/ann_cgg[-4] - 1)</code></td>
+</tr>
+<tr>
+<td>Fixed capital formation</td>
+<td><code>100*(ann_fcf/ann_fcf[-4] - 1)</code></td>
+</tr>
+<tr>
+<td>Exports of goods and services</td>
+<td><code>100*(ann_xgs/ann_xgs[-4] - 1)</code></td>
+</tr>
+<tr>
+<td>Imports of goods and services</td>
+<td><code>100*(ann_mgs/ann_mgs[-4] - 1)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Supporting variables</strong></p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_supporting_var_q.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPI, Q/Q PA</td>
+<td><code>apct_cpi</code></td>
+<td>% annualised headline inflation</td>
+</tr>
+<tr>
+<td>Nominal interest rate</td>
+<td><code>100*i</code></td>
+<td>Annual interest rate</td>
+</tr>
+<tr>
+<td>Nominal exchange rate (USD)</td>
+<td><code>e</code></td>
+<td>Local currency per USD (scaled level)</td>
+</tr>
+<tr>
+<td>Real interest rate</td>
+<td><code>100*ri</code> | <code>100*ri_tnd</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Real exchange rate</td>
+<td><code>re</code> | <code>re_tnd</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Real exchange rate, Q/Q PA, annualized</td>
+<td><code>apct_re</code></td>
+<td>% annualised real exchange rate growth</td>
+</tr>
+<tr>
+<td>Terms of trade</td>
+<td><code>tot</code></td>
+<td>Export deflator / Import deflator</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>External environment variables</strong></p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_external_environment_q.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Effective external GDP gap</td>
+<td><code>100*(gdpwx_gap - 1)</code></td>
+<td>Trade-weighted foreign demand gap</td>
+</tr>
+<tr>
+<td>Effective external real exchange rate gap</td>
+<td><code>100*(rewx_gap - 1)</code></td>
+<td>Real gap vs USD, weighted for other external countries' moves relative to USD (&gt; 0: currency is competitive against trading-partner basket)</td>
+</tr>
+<tr>
+<td>Real USD exchange rate gap</td>
+<td><code>100*(re_gap - 1)</code></td>
+<td>Real gap vs USD</td>
+</tr>
+<tr>
+<td>US nominal interest rate</td>
+<td><code>100*iw</code></td>
+<td>Annual external interest rate</td>
+</tr>
+<tr>
+<td>US real interest rate</td>
+<td><code>100*riw</code></td>
+<td>Annual external real interest rate</td>
+</tr>
+<tr>
+<td>Nominal USD exchange rate</td>
+<td><code>e</code></td>
+<td>Local currency per USD (scaled level)</td>
+</tr>
+<tr>
+<td>Real USD exchange rate</td>
+<td><code>re</code> | <code>re_tnd</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h3 id="annual-reports">Annual Reports<a class="headerlink" href="#annual-reports" title="Permanent link">&para;</a></h3>
+<p><strong>Real GDP components, Y/Y</strong></p>
+<p>Annual % calendar-year growth (annual sums).</p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_gdp_components_a.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GDP</td>
+<td><code>yy_pct_gdp</code></td>
+</tr>
+<tr>
+<td>Private consumption</td>
+<td><code>yy_pct_cpr</code></td>
+</tr>
+<tr>
+<td>Government consumption</td>
+<td><code>yy_pct_cgg</code></td>
+</tr>
+<tr>
+<td>Fixed capital formation</td>
+<td><code>yy_pct_fcf</code></td>
+</tr>
+<tr>
+<td>Exports of goods and services</td>
+<td><code>yy_pct_xgs</code></td>
+</tr>
+<tr>
+<td>Imports of goods and services</td>
+<td><code>yy_pct_mgs</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Gaps in real GDP components</strong></p>
+<p>Annual variable sum over annual trend sum, to show % deviation from trend.</p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_gaps_a.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GDP</td>
+<td><code>100*(yy_gdp_gap-1)</code></td>
+</tr>
+<tr>
+<td>Private consumption</td>
+<td><code>100*(yy_cpr_gap-1)</code></td>
+</tr>
+<tr>
+<td>Government consumption</td>
+<td><code>100*(yy_cgg_gap-1)</code></td>
+</tr>
+<tr>
+<td>Fixed capital formation</td>
+<td><code>100*(yy_fcf_gap-1)</code></td>
+</tr>
+<tr>
+<td>Exports of goods and services</td>
+<td><code>100*(yy_xgs_gap-1)</code></td>
+</tr>
+<tr>
+<td>Imports of goods and services</td>
+<td><code>100*(yy_mgs_gap-1)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Real GDP ratios</strong></p>
+<p>Ratio of annual sums to annual GDP.</p>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_gdp_ratios_a.png" /></p>
 </figure>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Private consumption to GDP</td>
+<td><code>yy_cpr_to_gdp</code></td>
+</tr>
+<tr>
+<td>Government consumption to GDP</td>
+<td><code>yy_cgg_to_gdp</code></td>
+</tr>
+<tr>
+<td>Fixed capital formation to GDP</td>
+<td><code>yy_fcf_to_gdp</code></td>
+</tr>
+<tr>
+<td>Exports of goods and services to GDP</td>
+<td><code>yy_xgs_to_gdp</code></td>
+</tr>
+<tr>
+<td>Imports of goods and services to GDP</td>
+<td><code>yy_mgs_to_gdp</code></td>
+</tr>
+<tr>
+<td>Change in business inventories to GDP</td>
+<td><code>yy_cbi_to_gdp</code></td>
+</tr>
+<tr>
+<td>Statistical discrepancies to GDP</td>
+<td><code>yy_sdx_to_gdp</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Supporting variables</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Variable</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPI, Q/Q PA</td>
+<td><code>yy_pct_cpi</code></td>
+<td>% change of annual average CPI</td>
+</tr>
+<tr>
+<td>Nominal interest rate</td>
+<td><code>100*yy_i</code></td>
+<td>Annual average interest rate</td>
+</tr>
+<tr>
+<td>Nominal exchange rate (USD)</td>
+<td><code>yy_e</code></td>
+<td>Annual average exchange rate</td>
+</tr>
+<tr>
+<td>Real interest rate</td>
+<td><code>100*yy_ri</code> | <code>100*yy_ri_tnd</code></td>
+<td>Annual average real interest rate and trend</td>
+</tr>
+<tr>
+<td>Real exchange rate</td>
+<td><code>yy_re</code> | <code>yy_re_tnd</code></td>
+<td>Annual average real exchange rate and trend</td>
+</tr>
+<tr>
+<td>Real exchange rate, Q/Q PA, annualized</td>
+<td><code>yy_pct_re</code></td>
+<td>Y/Y % change of annual average real exchange rate</td>
+</tr>
+<tr>
+<td>Terms of trade</td>
+<td><code>yy_tot</code></td>
+<td>Annual average terms of trade</td>
+</tr>
+</tbody>
+</table>
 <figure>
 <p><img alt="Focus economies report" src="assets/images/fc_supporting_var_a.png" /></p>
 </figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>CPI, Q/Q PA</em> and <em>Real exchange rate, Q/Q PA, annualized</em> are Y/Y despite the label.</p>
+</div>
 
 
 
